@@ -1,7 +1,6 @@
-class Graph {
-    private adjList: Map<number, number[]>;
-
-    constructor() {
-        this.adjList = new Map();
+addEdge(v: number, w: number) {
+        if (!this.adjList.has(v)) {
+            this.adjList.set(v, []);
+        }
+        this.adjList.get(v)!.push(w);
     }
-}
